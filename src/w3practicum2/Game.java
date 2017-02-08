@@ -1,22 +1,58 @@
 package w3practicum2;
 
+import java.time.Year;
+
 public class Game {
 	private String name;
 	private int releaseJaar;
 	private double nieuwPrijs;
-	
-	public Game(String name, int rj, double nPr){
+
+	public Game(String name, int rj, double nPr) {
 		this.name = name;
 		releaseJaar = rj;
 		nieuwPrijs = nPr;
 	}
-	
-	public String getNaam(){
+
+	public String getNaam() {
 		return name;
 	}
-	public double huidigeWaarde(){
-		//caluculation needed
-		return nieuwPrijs;
+
+	public double huidigeWaarde() {
+		int jaarenDelta = Year.now().getValue() - releaseJaar;
+		double newPrice = nieuwPrijs;
+		for (int i = 1; i <= jaarenDelta; i++) {
+			newPrice -= (newPrice / 100) * 30;
+		}
+		return newPrice;
 	}
-	
+
+	public boolean equals(Object andereObject) {
+		// if (andereObject==this) {
+		// return true;
+		// } else {
+		// return false;
+		// }
+//		boolean gelijk = andereObject instanceof Game;
+//		if (gelijk) {
+//			Game g = (Game) andereObject;
+//			System.out.println(g.getNaam());
+//			System.out.println(this.name);
+//			if (g.getNaam().equals(this.name)) {
+//				return true;
+//			} else {
+//				return false;
+//			}
+//		}
+//		return false;
+		boolean b = this.name.equals(((Game)andereObject).name);
+		
+		return b;
+
+	}
+
+	public String toString() {
+		String s = name + " , uitgegeven in " + releaseJaar + " ; nieuwprijs: " + nieuwPrijs + " nu voor: €"
+				+ huidigeWaarde();
+		return s;
+	}
 }
