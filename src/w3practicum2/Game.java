@@ -27,27 +27,9 @@ public class Game {
 	}
 
 	public boolean equals(Object andereObject) {
-		// if (andereObject==this) {
-		// return true;
-		// } else {
-		// return false;
-		// }
-//		boolean gelijk = andereObject instanceof Game;
-//		if (gelijk) {
-//			Game g = (Game) andereObject;
-//			System.out.println(g.getNaam());
-//			System.out.println(this.name);
-//			if (g.getNaam().equals(this.name)) {
-//				return true;
-//			} else {
-//				return false;
-//			}
-//		}
-//		return false;
-		boolean b = this.name.equals(((Game)andereObject).name);
-		
-		return b;
+		boolean b = this.name.equals(((Game) andereObject).name);
 
+		return b;
 	}
 
 	public String toString() {
