@@ -33,7 +33,7 @@ public class Game {
 	}
 
 	public String toString() {
-		String s = name + " , uitgegeven in " + releaseJaar + " ; nieuwprijs: " + nieuwPrijs + " nu voor: €"
+		String s = name + " , uitgegeven in " + releaseJaar + " ; nieuwprijs: " + nieuwPrijs + " nu voor: "
 				+ huidigeWaarde();
 		return s;
 	}
