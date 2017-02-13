@@ -20,6 +20,7 @@ public class Auto extends Voertuig {
 		return newPrice;
 	}
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		boolean eq = false;
