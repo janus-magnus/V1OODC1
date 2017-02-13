@@ -1,4 +1,4 @@
-package w4practium1;
+package w4practicum1;
 
 import java.util.ArrayList;
 

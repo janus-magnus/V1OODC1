@@ -5,4 +5,4 @@
  * @author Yannick
  *
  */
-package w4practium1;
+package w4practicum1;

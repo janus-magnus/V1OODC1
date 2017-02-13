@@ -1,4 +1,4 @@
-package w4practium1;
+package w4practicum1;
 
 public abstract class Voertuig implements Goed{
 	private String type;
