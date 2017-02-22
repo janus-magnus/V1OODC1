@@ -14,10 +14,9 @@ public class BedrijfsInventaris {
 	}
 
 	public void schafAan(Goed g) {
-		// System.out.println(g);
-		if (!allegoederen.contains(g)) {
-			// System.out.println("ja");
+		if (!allegoederen.contains(g) && budget >= g.huidigeWaarde()) {
 			allegoederen.add(g);
+			budget -= g.huidigeWaarde();
 		}
 	}
 

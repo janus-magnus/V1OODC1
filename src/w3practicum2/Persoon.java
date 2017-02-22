@@ -15,11 +15,8 @@ public class Persoon {
 
 	public boolean koop(Game g) {
 		if (g.huidigeWaarde() <= budget) {
-			// System.out.println(mijnGames);
 			if (!mijnGames.isEmpty()) {
-				// System.out.println("test2");
 				if (!mijnGames.contains(g)) {
-					// System.out.println("test3");
 					mijnGames.add(g);
 					budget -= g.huidigeWaarde();
 					return true;
@@ -36,7 +33,6 @@ public class Persoon {
 	}
 
 	public boolean verkoop(Game g, Persoon koper) {
-		// add budget calc
 		if (mijnGames.contains(g) && koper.koop(g)) {
 			budget += g.huidigeWaarde();
 			mijnGames.remove(g);

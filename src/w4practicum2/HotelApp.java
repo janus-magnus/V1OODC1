@@ -40,9 +40,10 @@ public class HotelApp extends Application implements EventHandler<ActionEvent> {
 		DatePicker aanDP = new DatePicker();
 
 		LocalDate today = LocalDate.now();
+		
 		aanDP.setValue(today);
 		vrDP.setValue(today.plusDays(1));
-		ComboBox kamerC = new ComboBox();
+		ComboBox<KamerType> kamerC = new ComboBox<KamerType>();
 		kamerC.getItems().addAll(hotel.getKamerTypen());
 		kamerC.getSelectionModel().selectFirst();
 
